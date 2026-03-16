@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -60,8 +61,14 @@ export function AdvantagesSection() {
             transition={{ duration: 0.6 }}
           >
             <Card className="group relative h-full min-h-[280px] overflow-hidden border-white/15 bg-gradient-to-br from-[#1a1e2a] via-[#121722] to-[#0d1219] p-6">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(209,134,71,0.35),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(85,120,183,0.28),transparent_40%)]" />
-              <div className="absolute inset-0 bg-grid-fade bg-[length:34px_34px] opacity-20" />
+              <Image
+                src="/images/adv-planning.jpg"
+                alt="Planning board and time-blocking session"
+                fill
+                className="object-cover opacity-38 transition duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black/72" />
+              <div className="absolute inset-0 bg-grid-fade bg-[length:34px_34px] opacity-18" />
               <div className="relative">
                 <p className="text-xs uppercase tracking-[0.18em] text-white/58">
                   Command Dashboard
@@ -130,7 +137,14 @@ export function AdvantagesSection() {
             transition={{ duration: 0.55 }}
           >
             <Card className="relative h-full min-h-[210px] overflow-hidden border-white/15 bg-gradient-to-br from-[#171319] via-[#11141c] to-[#0b1118] p-5">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(210,138,88,0.36),transparent_36%)]" />
+              <Image
+                src="/images/adv-workspace.jpg"
+                alt="Premium workspace for weekly reset and planning"
+                fill
+                className="object-cover opacity-34"
+              />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(210,138,88,0.34),transparent_36%)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/58 to-black/72" />
               <div className="relative">
                 <h3 className="font-heading text-2xl text-white">{advantages[5].title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/66">

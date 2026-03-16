@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Check, TimerReset } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -59,6 +60,20 @@ export function HeroSection() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
             <Card className="relative overflow-hidden rounded-[30px] border-white/15 bg-gradient-to-b from-[#12161f] to-[#0b0f15] p-5 shadow-premium sm:p-6">
+              <div className="relative mb-4 overflow-hidden rounded-2xl border border-white/12">
+                <Image
+                  src="/images/hero-focus.jpg"
+                  alt="Premium productivity workspace"
+                  width={1600}
+                  height={900}
+                  className="h-40 w-full object-cover sm:h-44"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white/80">
+                  Focus Environment
+                </div>
+              </div>
               <div className="mb-5 flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.16em] text-white/45">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -65,6 +66,15 @@ export function PhilosophySection() {
                     <p className="mt-2 text-sm text-white/65">
                       Consistent deep work hours across 4 weeks.
                     </p>
+                  </div>
+                  <div className="mb-3 overflow-hidden rounded-2xl border border-white/12">
+                    <Image
+                      src="/images/philosophy-team.jpg"
+                      alt="Team aligning on a focused workflow"
+                      width={1600}
+                      height={900}
+                      className="h-36 w-full object-cover sm:h-40"
+                    />
                   </div>
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="rounded-2xl border border-white/12 bg-black/28 p-4">

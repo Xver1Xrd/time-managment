@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { BarChart3, Clock3, Layers, Sparkles } from "lucide-react";
 import { showcaseTabs } from "@/lib/data";
@@ -103,6 +104,15 @@ export function ShowcaseSection() {
               >
                 <div className="absolute inset-0 bg-grid-fade bg-[length:30px_30px] opacity-20" />
                 <div className="relative">
+                  <div className="mb-4 overflow-hidden rounded-xl border border-white/12">
+                    <Image
+                      src="/images/showcase-desk.jpg"
+                      alt="Focused desk setup for deep work"
+                      width={1600}
+                      height={900}
+                      className="h-28 w-full object-cover"
+                    />
+                  </div>
                   <div className="mb-4 flex items-center justify-between rounded-xl border border-white/12 bg-white/[0.03] px-4 py-3">
                     <p className="text-sm text-white/76">Today&apos;s Rhythm</p>
                     <p className="text-xs uppercase tracking-[0.15em] text-white/46">
