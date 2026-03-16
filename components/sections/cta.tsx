@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,13 @@ export function CtaSection() {
     <section className="section-space pt-8">
       <Container>
         <Card className="relative overflow-hidden rounded-[30px] border-white/15 bg-gradient-to-br from-[#1a1712] via-[#101822] to-[#0c1018] p-7 sm:p-10">
+          <Image
+            src="/images/cta-bg.jpg"
+            alt="Фоновое фото финального блока призыва к действию"
+            fill
+            className="object-cover opacity-34"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/38 via-black/62 to-black/80" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(211,137,78,0.28),transparent_34%),radial-gradient(circle_at_88%_25%,rgba(90,122,184,0.22),transparent_34%)]" />
           <motion.div
             className="relative z-10 max-w-2xl"

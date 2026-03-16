@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { stats } from "@/lib/data";
 import { Card } from "@/components/ui/card";
@@ -9,8 +10,15 @@ export function StatsSection() {
   return (
     <section className="section-space pt-4 sm:pt-6">
       <Container>
-        <Card className="overflow-hidden rounded-[26px] border-white/15 bg-[#0c1118]/82">
-          <div className="grid gap-0 divide-y divide-white/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-5">
+        <Card className="relative overflow-hidden rounded-[26px] border-white/15 bg-[#0c1118]/82">
+          <Image
+            src="/images/stats-bg.jpg"
+            alt="Фоновое фото для блока метрик"
+            fill
+            className="object-cover opacity-28"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/64 to-black/72" />
+          <div className="relative grid gap-0 divide-y divide-white/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-5">
             {stats.map((item, index) => (
               <motion.div
                 key={item.label}
