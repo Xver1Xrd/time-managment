@@ -18,7 +18,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
         <>
           <motion.button
             type="button"
-            aria-label="Close mobile menu overlay"
+            aria-label="Закрыть подложку мобильного меню"
             className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,11 +34,11 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
           >
             <div className="mb-7 flex items-center justify-between">
               <span className="font-heading text-sm uppercase tracking-[0.2em] text-white/70">
-                Menu
+                Меню
               </span>
               <button
                 type="button"
-                aria-label="Close menu"
+                aria-label="Закрыть меню"
                 onClick={onClose}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] text-white/80 transition hover:bg-white/[0.08]"
               >
@@ -65,7 +65,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
             </nav>
             <div className="mt-7">
               <Button href="/pricing" fullWidth size="lg" onClick={onClose}>
-                Build Your Day
+                Собрать Свой День
               </Button>
             </div>
           </motion.div>

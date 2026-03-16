@@ -1,223 +1,223 @@
 export const navLinks = [
-  { label: "Features", href: "/features" },
-  { label: "System", href: "/#showcase" },
-  { label: "Focus", href: "/#workflow" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Contact", href: "/contact" }
+  { label: "Возможности", href: "/features" },
+  { label: "Система", href: "/#showcase" },
+  { label: "Фокус", href: "/#workflow" },
+  { label: "Тарифы", href: "/pricing" },
+  { label: "Контакты", href: "/contact" }
 ];
 
 export const stats = [
-  { value: "120K+", label: "Planned Sessions" },
-  { value: "89%", label: "Better Focus Consistency" },
-  { value: "2.4M", label: "Hours Structured" },
-  { value: "50+", label: "Frameworks In One System" },
-  { value: "24/7", label: "Clarity Dashboard" }
+  { value: "120K+", label: "Запланированных Сессий" },
+  { value: "89%", label: "Рост Устойчивого Фокуса" },
+  { value: "2.4M", label: "Часов Под Контролем" },
+  { value: "50+", label: "Фреймворков В Системе" },
+  { value: "24/7", label: "Панель Ясности" }
 ];
 
 export const valueCards = [
   {
-    title: "Clarity",
+    title: "Ясность",
     description:
-      "Turn a noisy backlog into a clean visual map of what matters now."
+      "Преобразуйте шумный бэклог в понятную карту задач, важных прямо сейчас."
   },
   {
-    title: "Prioritization",
+    title: "Приоритизация",
     description:
-      "Use weighted priority lanes so important work always rises to the top."
+      "Весовые приоритеты поднимают важные задачи наверх автоматически."
   },
   {
-    title: "Deep Focus",
+    title: "Глубокий Фокус",
     description:
-      "Protect uninterrupted sessions with rhythm-based focus windows."
+      "Защищайте непрерывные сессии благодаря фокус-окнам по рабочему ритму."
   },
   {
-    title: "Time Awareness",
+    title: "Осознанность Времени",
     description:
-      "See where your hours go and redesign the week with intention."
+      "Видьте, куда уходят часы, и проектируйте неделю осознанно."
   }
 ];
 
 export const showcaseTabs = [
   {
     key: "plan",
-    label: "Plan",
-    headline: "Architect your day before it begins.",
+    label: "План",
+    headline: "Спроектируйте день до его начала.",
     description:
-      "Build your day in layered blocks: priorities, support tasks, and recovery time. A planning canvas keeps commitments realistic.",
+      "Собирайте день по слоям: приоритеты, поддерживающие задачи и восстановление. План остается реалистичным и выполнимым.",
     metrics: [
-      { label: "Tasks Mapped", value: "18" },
-      { label: "Time Blocks", value: "07" },
-      { label: "Daily Capacity", value: "92%" }
+      { label: "Задач В Карте", value: "18" },
+      { label: "Блоков Времени", value: "07" },
+      { label: "Дневная Емкость", value: "92%" }
     ],
     timeline: [
-      { time: "07:30", title: "Morning Systems Check", tone: "accent" },
-      { time: "09:00", title: "Deep Work Block A", tone: "neutral" },
-      { time: "11:30", title: "Team Decisions", tone: "neutral" }
+      { time: "07:30", title: "Утренний Системный Чек", tone: "accent" },
+      { time: "09:00", title: "Блок Глубокой Работы A", tone: "neutral" },
+      { time: "11:30", title: "Командные Решения", tone: "neutral" }
     ]
   },
   {
     key: "focus",
-    label: "Focus",
-    headline: "Enter deep work with zero friction.",
+    label: "Фокус",
+    headline: "Входите в глубокую работу без трения.",
     description:
-      "Focus mode removes noise, activates session boundaries, and tracks cognitive energy. You stay in flow while the system handles timing.",
+      "Режим фокуса убирает шум, защищает границы сессии и отслеживает когнитивную энергию. Вы в потоке, система держит тайминг.",
     metrics: [
-      { label: "Current Sprint", value: "52m" },
-      { label: "Interruptions", value: "02" },
-      { label: "Flow Score", value: "94" }
+      { label: "Текущий Спринт", value: "52m" },
+      { label: "Прерывания", value: "02" },
+      { label: "Индекс Потока", value: "94" }
     ],
     timeline: [
-      { time: "13:00", title: "Design Sprint", tone: "accent" },
-      { time: "14:10", title: "Break + Reset", tone: "neutral" },
-      { time: "14:30", title: "Focus Block B", tone: "neutral" }
+      { time: "13:00", title: "Дизайн Спринт", tone: "accent" },
+      { time: "14:10", title: "Перерыв + Перезапуск", tone: "neutral" },
+      { time: "14:30", title: "Фокус Блок B", tone: "neutral" }
     ]
   },
   {
     key: "review",
-    label: "Review",
-    headline: "See patterns, not just completed tasks.",
+    label: "Анализ",
+    headline: "Видьте закономерности, а не только закрытые задачи.",
     description:
-      "Review mode highlights drift, wins, and missed estimates so you can calibrate your planning and preserve momentum week after week.",
+      "Режим анализа показывает отклонения, сильные стороны и ошибки оценок, чтобы вы калибровали план и сохраняли темп каждую неделю.",
     metrics: [
-      { label: "Weekly Completion", value: "87%" },
-      { label: "Focus Gain", value: "+21%" },
-      { label: "Time Reclaimed", value: "6.2h" }
+      { label: "Выполнение За Неделю", value: "87%" },
+      { label: "Рост Фокуса", value: "+21%" },
+      { label: "Возвращенное Время", value: "6.2h" }
     ],
     timeline: [
-      { time: "17:20", title: "Session Closeout", tone: "accent" },
-      { time: "17:35", title: "Learning Notes", tone: "neutral" },
-      { time: "17:50", title: "Tomorrow Draft", tone: "neutral" }
+      { time: "17:20", title: "Закрытие Сессии", tone: "accent" },
+      { time: "17:35", title: "Заметки По Выводам", tone: "neutral" },
+      { time: "17:50", title: "Черновик На Завтра", tone: "neutral" }
     ]
   },
   {
     key: "improve",
-    label: "Improve",
-    headline: "Evolve your system every cycle.",
+    label: "Улучшение",
+    headline: "Улучшайте систему в каждом цикле.",
     description:
-      "Receive targeted suggestions for better scheduling, cleaner priorities, and healthier workload pacing based on your real behavior.",
+      "Получайте точечные рекомендации по расписанию, приоритетам и темпу нагрузки на основе реального поведения.",
     metrics: [
-      { label: "Automation Rules", value: "14" },
-      { label: "Energy Alignment", value: "91%" },
-      { label: "Weekly Resets", value: "4/4" }
+      { label: "Правил Автоматизации", value: "14" },
+      { label: "Совпадение По Энергии", value: "91%" },
+      { label: "Недельных Ресетов", value: "4/4" }
     ],
     timeline: [
-      { time: "Sunday", title: "Weekly Reset", tone: "accent" },
-      { time: "Monday", title: "Priority Guardrails", tone: "neutral" },
-      { time: "Wednesday", title: "Midweek Rebalance", tone: "neutral" }
+      { time: "Воскресенье", title: "Недельный Ресет", tone: "accent" },
+      { time: "Понедельник", title: "Границы Приоритетов", tone: "neutral" },
+      { time: "Среда", title: "Перебалансировка Недели", tone: "neutral" }
     ]
   }
 ];
 
 export const workflowSteps = [
   {
-    title: "Capture",
+    title: "Сбор",
     description:
-      "Collect every task, commitment, and idea into a single intake stream."
+      "Собирайте все задачи, обязательства и идеи в единый входящий поток."
   },
   {
-    title: "Prioritize",
+    title: "Приоритизация",
     description:
-      "Rank work by impact, urgency, and effort using clear decision rules."
+      "Ранжируйте задачи по влиянию, срочности и усилиям по четким правилам."
   },
   {
-    title: "Schedule",
+    title: "Планирование",
     description:
-      "Assign work to realistic blocks based on energy and available capacity."
+      "Распределяйте задачи по реалистичным блокам с учетом энергии и емкости."
   },
   {
-    title: "Focus",
+    title: "Фокус",
     description:
-      "Run protected deep work sessions with boundaries and visual timers."
+      "Проводите защищенные deep work сессии с границами и визуальными таймерами."
   },
   {
-    title: "Review",
+    title: "Ревью",
     description:
-      "Close the loop daily and weekly to refine your system continuously."
+      "Ежедневно и еженедельно закрывайте цикл и улучшайте систему без остановки."
   }
 ];
 
 export const testimonials = [
   {
     quote:
-      "Momentum replaced my chaotic to-do list with a system I can trust. I now end the day with energy instead of mental debt.",
-    name: "Arielle Knox",
-    role: "Product Designer"
+      "Momentum заменил мой хаотичный список дел системой, которой я доверяю. Теперь я заканчиваю день с энергией, а не с перегрузом.",
+    name: "Алина Корнеева",
+    role: "Продуктовый Дизайнер"
   },
   {
     quote:
-      "The weekly reset changed everything. I stopped reacting and started directing my calendar with intent.",
-    name: "Victor Hale",
-    role: "Startup Founder"
+      "Недельный ресет изменил все. Я перестал реагировать и начал осознанно управлять своим календарем.",
+    name: "Виктор Громов",
+    role: "Основатель Стартапа"
   },
   {
     quote:
-      "It feels like a premium control room for my week. Clean interface, real structure, measurable focus gains.",
-    name: "Mina Patel",
-    role: "Freelance Strategist"
+      "Это как премиальный центр управления моей неделей. Чистый интерфейс, реальная структура и измеримый рост фокуса.",
+    name: "Марина Павлова",
+    role: "Независимый Стратег"
   }
 ];
 
 export const pricingPlans = [
   {
-    name: "Starter",
+    name: "Старт",
     price: "$0",
-    period: "/month",
-    description: "For students and solo users building core discipline.",
+    period: "/месяц",
+    description: "Для студентов и самостоятельных пользователей, выстраивающих дисциплину.",
     features: [
-      "Daily planner",
-      "3 focus sessions/day",
-      "Weekly summary",
-      "Basic analytics"
+      "Ежедневный планировщик",
+      "3 фокус-сессии в день",
+      "Недельная сводка",
+      "Базовая аналитика"
     ],
-    cta: "Start Free",
+    cta: "Начать Бесплатно",
     highlight: false
   },
   {
-    name: "Pro",
+    name: "Про",
     price: "$24",
-    period: "/month",
-    description: "For professionals who want consistent high-performance days.",
+    period: "/месяц",
+    description: "Для специалистов, которым нужна стабильная эффективность каждый день.",
     features: [
-      "Unlimited focus sessions",
-      "Priority mapping engine",
-      "Energy-based scheduling",
-      "Advanced insights",
-      "Automation rules"
+      "Безлимитные фокус-сессии",
+      "Движок карты приоритетов",
+      "Планирование по энергии",
+      "Продвинутая аналитика",
+      "Правила автоматизации"
     ],
-    cta: "Go Pro",
+    cta: "Выбрать Про",
     highlight: true
   },
   {
-    name: "Elite",
+    name: "Элит",
     price: "$64",
-    period: "/month",
-    description: "For founders and teams designing elite execution systems.",
+    period: "/месяц",
+    description: "Для основателей и команд, строящих элитную систему исполнения.",
     features: [
-      "Everything in Pro",
-      "Team planning boards",
-      "Performance benchmarks",
-      "White-glove onboarding",
-      "Priority support"
+      "Все из тарифа Про",
+      "Командные доски планирования",
+      "Бенчмарки эффективности",
+      "Персональный онбординг",
+      "Приоритетная поддержка"
     ],
-    cta: "Contact Sales",
+    cta: "Связаться С Отделом Продаж",
     highlight: false
   }
 ];
 
 export const footerLinks = {
   product: [
-    { label: "Features", href: "/features" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Integrations", href: "/features#integrations" }
+    { label: "Возможности", href: "/features" },
+    { label: "Тарифы", href: "/pricing" },
+    { label: "Интеграции", href: "/features#integrations" }
   ],
   company: [
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Changelog", href: "/features#changelog" }
+    { label: "О Нас", href: "/about" },
+    { label: "Контакты", href: "/contact" },
+    { label: "Обновления", href: "/features#changelog" }
   ],
   legal: [
-    { label: "Privacy", href: "#" },
-    { label: "Terms", href: "#" },
-    { label: "Security", href: "#" }
+    { label: "Конфиденциальность", href: "#" },
+    { label: "Условия", href: "#" },
+    { label: "Безопасность", href: "#" }
   ]
 };

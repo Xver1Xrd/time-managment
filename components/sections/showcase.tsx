@@ -30,10 +30,10 @@ export function ShowcaseSection() {
     <section id="showcase" className="section-space">
       <Container>
         <Reveal className="mb-10 max-w-3xl">
-          <Badge>Product Showcase</Badge>
+          <Badge>Демо Продукта</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            One intelligent system for planning, focus, and continuous
-            improvement.
+            Единая интеллектуальная система для планирования, фокуса и
+            непрерывного роста.
           </h2>
         </Reveal>
 
@@ -107,16 +107,16 @@ export function ShowcaseSection() {
                   <div className="mb-4 overflow-hidden rounded-xl border border-white/12">
                     <Image
                       src="/images/showcase-desk.jpg"
-                      alt="Focused desk setup for deep work"
+                      alt="Рабочий стол, настроенный для deep work"
                       width={1600}
                       height={900}
                       className="h-28 w-full object-cover"
                     />
                   </div>
                   <div className="mb-4 flex items-center justify-between rounded-xl border border-white/12 bg-white/[0.03] px-4 py-3">
-                    <p className="text-sm text-white/76">Today&apos;s Rhythm</p>
+                    <p className="text-sm text-white/76">Ритм Сегодняшнего Дня</p>
                     <p className="text-xs uppercase tracking-[0.15em] text-white/46">
-                      Live
+                      Онлайн
                     </p>
                   </div>
 
@@ -146,7 +146,7 @@ export function ShowcaseSection() {
                   </div>
                   <div className="mt-4 rounded-xl border border-white/12 bg-black/25 p-3">
                     <p className="text-xs uppercase tracking-[0.15em] text-white/46">
-                      Session Integrity
+                      Целостность Сессий
                     </p>
                     <div className="mt-3 h-2 rounded-full bg-white/10">
                       <motion.div

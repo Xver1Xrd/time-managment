@@ -15,9 +15,9 @@ export function PricingSection() {
     <section id="pricing" className="section-space">
       <Container>
         <Reveal className="mb-10 max-w-2xl">
-          <Badge>Pricing</Badge>
+          <Badge>Тарифы</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Plans for every level of intentional execution.
+            Тарифы для каждого уровня осознанного исполнения.
           </h2>
         </Reveal>
         <div className="grid gap-4 lg:grid-cols-3">
@@ -38,7 +38,7 @@ export function PricingSection() {
               >
                 {plan.highlight && (
                   <span className="mb-5 inline-flex w-fit rounded-full border border-accent/45 bg-accent/16 px-3 py-1 text-xs uppercase tracking-[0.16em] text-accent">
-                    Most Popular
+                    Самый Популярный
                   </span>
                 )}
                 <h3 className="font-heading text-2xl text-white">{plan.name}</h3>
@@ -62,7 +62,7 @@ export function PricingSection() {
                 </ul>
                 <div className="mt-8">
                   <Button
-                    href={plan.name === "Elite" ? "/contact" : "/pricing"}
+                    href={plan.name === "Элит" ? "/contact" : "/pricing"}
                     variant={plan.highlight ? "primary" : "secondary"}
                     fullWidth
                   >

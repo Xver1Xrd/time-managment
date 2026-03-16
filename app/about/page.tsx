@@ -7,9 +7,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        badge="About Momentum"
-        title="We help ambitious people design better days."
-        description="Momentum is a premium time management system focused on calm execution. We combine intentional planning, deep work structure, and continuous review into one cohesive workflow."
+        badge="О Momentum"
+        title="Мы помогаем амбициозным людям проектировать лучшие дни."
+        description="Momentum — премиальная система тайм-менеджмента, построенная вокруг спокойного и точного исполнения. Мы объединяем осознанное планирование, deep work и непрерывное ревью в единый процесс."
       />
       <PhilosophySection />
       <TestimonialsSection />

@@ -12,9 +12,9 @@ export function TestimonialsSection() {
     <section className="section-space">
       <Container>
         <Reveal className="mb-10 max-w-2xl">
-          <Badge>Social Proof</Badge>
+          <Badge>Отзывы</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Trusted by people who take their time seriously.
+            Нам доверяют люди, которые серьезно относятся к своему времени.
           </h2>
         </Reveal>
         <div className="grid gap-4 lg:grid-cols-3">

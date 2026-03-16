@@ -8,9 +8,9 @@ import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 
 const principles = [
-  "Time is a design problem, not a motivation problem.",
-  "Structure creates freedom because decisions are made in advance.",
-  "A clear day creates a clear mind and better outcomes."
+  "Время — это задача дизайна, а не мотивации.",
+  "Структура создает свободу, потому что решения приняты заранее.",
+  "Ясный день формирует ясный ум и более сильные результаты."
 ];
 
 export function PhilosophySection() {
@@ -20,20 +20,20 @@ export function PhilosophySection() {
         <Card className="overflow-hidden rounded-[32px] border-white/15 bg-[#0e131c]/90 p-6 sm:p-8 lg:p-10">
           <div className="grid items-start gap-10 lg:grid-cols-[1.08fr_0.92fr]">
             <Reveal>
-              <Badge className="border-white/20">Philosophy</Badge>
+              <Badge className="border-white/20">Философия</Badge>
               <h2 className="mt-5 font-heading text-3xl leading-tight tracking-tight text-white sm:text-[3.4rem]">
-                Structure Creates Freedom.
+                Структура Создает Свободу.
               </h2>
               <div className="mt-7 grid gap-6 text-sm leading-relaxed text-white/68 sm:grid-cols-2">
                 <p>
-                  Momentum helps you treat time like a strategic asset. Instead of
-                  chasing productivity hacks, you build a repeatable system with
-                  clear rules and calm execution.
+                  Momentum помогает относиться ко времени как к стратегическому
+                  активу. Вместо гонки за хаками продуктивности вы строите
+                  повторяемую систему с понятными правилами.
                 </p>
                 <p>
-                  Each day is designed with intent: priorities first, attention
-                  protected, progress visible. Better systems create better
-                  outcomes across work and life.
+                  Каждый день проектируется осознанно: сначала приоритеты,
+                  внимание защищено, прогресс видим. Лучшая система дает лучшие
+                  результаты и в работе, и в жизни.
                 </p>
               </div>
               <div className="mt-8 space-y-2">
@@ -58,19 +58,19 @@ export function PhilosophySection() {
                 <div className="relative">
                   <div className="mb-4 rounded-2xl border border-white/12 bg-black/30 p-4">
                     <p className="text-xs uppercase tracking-[0.16em] text-white/46">
-                      Weekly Pulse
+                      Недельный Пульс
                     </p>
                     <p className="mt-2 font-heading text-2xl text-white">
-                      Focus Quality 91%
+                      Качество Фокуса 91%
                     </p>
                     <p className="mt-2 text-sm text-white/65">
-                      Consistent deep work hours across 4 weeks.
+                      Стабильные часы deep work на протяжении 4 недель.
                     </p>
                   </div>
                   <div className="mb-3 overflow-hidden rounded-2xl border border-white/12">
                     <Image
                       src="/images/philosophy-team.jpg"
-                      alt="Team aligning on a focused workflow"
+                      alt="Команда синхронизирует приоритеты и фокусный процесс"
                       width={1600}
                       height={900}
                       className="h-36 w-full object-cover sm:h-40"
@@ -79,20 +79,20 @@ export function PhilosophySection() {
                   <div className="grid gap-3 sm:grid-cols-2">
                     <div className="rounded-2xl border border-white/12 bg-black/28 p-4">
                       <p className="text-xs uppercase tracking-[0.16em] text-white/45">
-                        Recovery Ratio
+                        Баланс Восстановления
                       </p>
                       <p className="mt-2 font-heading text-3xl text-white">1:4</p>
                     </div>
                     <div className="rounded-2xl border border-white/12 bg-black/28 p-4">
                       <p className="text-xs uppercase tracking-[0.16em] text-white/45">
-                        Priority Accuracy
+                        Точность Приоритетов
                       </p>
                       <p className="mt-2 font-heading text-3xl text-white">88%</p>
                     </div>
                   </div>
                   <div className="mt-3 rounded-2xl border border-white/12 bg-black/28 p-4">
                     <p className="text-xs uppercase tracking-[0.16em] text-white/45">
-                      Designed Week
+                      Спроектированная Неделя
                     </p>
                     <div className="mt-3 grid grid-cols-7 gap-2">
                       {Array.from({ length: 7 }).map((_, i) => (

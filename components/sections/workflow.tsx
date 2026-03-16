@@ -11,9 +11,9 @@ export function WorkflowSection() {
     <section id="workflow" className="section-space">
       <Container>
         <Reveal className="mb-10 max-w-2xl">
-          <Badge>Workflow</Badge>
+          <Badge>Процесс</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Focus is built through a repeatable sequence.
+            Фокус строится через повторяемую последовательность.
           </h2>
         </Reveal>
 

@@ -22,9 +22,9 @@ export function FeaturesSection() {
     <section id="features" className="section-space">
       <Container>
         <Reveal className="mb-10 max-w-2xl">
-          <Badge>Core System</Badge>
+          <Badge>Ядро Системы</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Replace scattered effort with structured execution.
+            Замените разрозненные усилия структурным исполнением.
           </h2>
         </Reveal>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -55,7 +55,7 @@ export function FeaturesSection() {
                     href="/features"
                     className="mt-7 inline-flex items-center text-sm text-white/78 transition hover:text-white"
                   >
-                    Explore <ArrowUpRight className="ml-1 h-4 w-4" />
+                    Изучить <ArrowUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </Card>
               </motion.div>

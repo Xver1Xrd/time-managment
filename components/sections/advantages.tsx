@@ -10,34 +10,34 @@ import { Reveal } from "@/components/ui/reveal";
 
 const advantages = [
   {
-    title: "Intelligent Planning",
+    title: "Интеллектуальное Планирование",
     description:
-      "Daily blueprints adapt automatically to your available capacity."
+      "Дневной план автоматически адаптируется под вашу реальную емкость."
   },
   {
-    title: "Priority Mapping",
+    title: "Карта Приоритетов",
     description:
-      "Impact-aware ranking keeps strategic work visible and protected."
+      "Ранжирование по влиянию держит стратегические задачи в фокусе."
   },
   {
-    title: "Deep Work Sessions",
+    title: "Deep Work Сессии",
     description:
-      "Session boundaries and visual timers reduce attention fragmentation."
+      "Границы сессий и визуальные таймеры снижают фрагментацию внимания."
   },
   {
-    title: "Energy-Based Scheduling",
+    title: "Планирование По Энергии",
     description:
-      "High-cognitive work is placed where your energy curve is strongest."
+      "Сложная когнитивная работа ставится в пик вашей энергии."
   },
   {
-    title: "Progress Visibility",
+    title: "Прозрачный Прогресс",
     description:
-      "Real-time dashboards show completion quality, not just activity volume."
+      "Панели в реальном времени показывают качество, а не только активность."
   },
   {
-    title: "Weekly Reset System",
+    title: "Система Недельного Ресета",
     description:
-      "Close each week with review rituals and a clean next-week launch."
+      "Закрывайте неделю через ревью-ритуал и запускайте новую с чистого листа."
   }
 ];
 
@@ -46,9 +46,9 @@ export function AdvantagesSection() {
     <section className="section-space" id="system">
       <Container>
         <Reveal className="mb-10">
-          <Badge>Why It Works</Badge>
+          <Badge>Почему Это Работает</Badge>
           <h2 className="mt-5 max-w-3xl font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Premium planning architecture designed for consistent control.
+            Премиальная архитектура планирования для стабильного контроля.
           </h2>
         </Reveal>
 
@@ -63,7 +63,7 @@ export function AdvantagesSection() {
             <Card className="group relative h-full min-h-[280px] overflow-hidden border-white/15 bg-gradient-to-br from-[#1a1e2a] via-[#121722] to-[#0d1219] p-6">
               <Image
                 src="/images/adv-planning.jpg"
-                alt="Planning board and time-blocking session"
+                alt="Карта планирования и сессия тайм-блокинга"
                 fill
                 className="object-cover opacity-38 transition duration-700 group-hover:scale-105"
               />
@@ -71,14 +71,14 @@ export function AdvantagesSection() {
               <div className="absolute inset-0 bg-grid-fade bg-[length:34px_34px] opacity-18" />
               <div className="relative">
                 <p className="text-xs uppercase tracking-[0.18em] text-white/58">
-                  Command Dashboard
+                  Командный Дашборд
                 </p>
                 <h3 className="mt-3 font-heading text-3xl text-white">
-                  One Screen. Full Situational Awareness.
+                  Один Экран. Полная Оперативная Ясность.
                 </h3>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-white/68">
-                  See priorities, session rhythm, and outcome signals in one calm
-                  command view.
+                  Видьте приоритеты, ритм сессий и сигналы результата в одном
+                  спокойном экране управления.
                 </p>
               </div>
             </Card>
@@ -123,7 +123,7 @@ export function AdvantagesSection() {
                   <p className="mt-2 text-sm text-white/63">{item.description}</p>
                 </div>
                 <span className="mt-6 text-xs uppercase tracking-[0.18em] text-white/46">
-                  Explore
+                  Изучить
                 </span>
               </Card>
             </motion.div>
@@ -139,7 +139,7 @@ export function AdvantagesSection() {
             <Card className="relative h-full min-h-[210px] overflow-hidden border-white/15 bg-gradient-to-br from-[#171319] via-[#11141c] to-[#0b1118] p-5">
               <Image
                 src="/images/adv-workspace.jpg"
-                alt="Premium workspace for weekly reset and planning"
+                alt="Премиальное рабочее пространство для недельного ресета"
                 fill
                 className="object-cover opacity-34"
               />
@@ -151,7 +151,7 @@ export function AdvantagesSection() {
                   {advantages[5].description}
                 </p>
                 <div className="mt-6 flex gap-2">
-                  {["Audit", "Reset", "Rebuild"].map((tag) => (
+                  {["Аудит", "Ресет", "Пересборка"].map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/70"

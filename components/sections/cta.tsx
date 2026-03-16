@@ -20,22 +20,22 @@ export function CtaSection() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-xs uppercase tracking-[0.2em] text-white/58">
-              Final Step
+              Финальный Шаг
             </p>
             <h2 className="mt-4 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-              Build a Day That Works for You.
+              Соберите День, Который Работает На Вас.
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
-              Replace chaos with clarity using a premium system for planning,
-              focus, and progress. Design your time, then execute with calm
-              precision.
+              Замените хаос ясностью через премиальную систему планирования,
+              фокуса и прогресса. Спроектируйте свое время и исполняйте план
+              с точностью и спокойствием.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/pricing" size="lg">
-                Start Designing Time <ArrowRight className="ml-2 h-4 w-4" />
+                Начать Проектировать Время <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button href="/contact" size="lg" variant="secondary">
-                Talk to Team
+                Связаться С Командой
               </Button>
             </div>
           </motion.div>

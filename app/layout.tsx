@@ -18,15 +18,15 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Momentum | Premium Time Management System",
+  title: "Momentum | Премиальная Система Тайм-Менеджмента",
   description:
-    "Momentum is a premium productivity platform designed for focus, planning, and elite daily execution.",
+    "Momentum — премиальная платформа продуктивности для фокуса, планирования и высокоэффективного исполнения дня.",
   keywords: [
-    "time management",
-    "productivity",
-    "focus system",
-    "planning",
-    "deep work"
+    "тайм-менеджмент",
+    "продуктивность",
+    "система фокуса",
+    "планирование",
+    "глубокая работа"
   ]
 };
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body
         className={`${manrope.variable} ${spaceGrotesk.variable} bg-background text-foreground antialiased`}
       >

@@ -6,16 +6,16 @@ import { Container } from "@/components/ui/container";
 
 const faq = [
   {
-    q: "Can I switch plans later?",
-    a: "Yes. Upgrade or downgrade any time. Changes apply instantly with prorated billing."
+    q: "Можно ли сменить тариф позже?",
+    a: "Да. Вы можете повысить или понизить тариф в любой момент, изменения применяются мгновенно."
   },
   {
-    q: "Do you offer team onboarding?",
-    a: "Elite includes white-glove onboarding with planning architecture and weekly setup."
+    q: "Есть ли онбординг для команд?",
+    a: "Тариф Элит включает персональный онбординг с архитектурой планирования и недельной настройкой."
   },
   {
-    q: "Is there a free trial for Pro?",
-    a: "Yes. You can try Pro for 14 days with full access to focus and analytics modules."
+    q: "Есть ли пробный период для Про?",
+    a: "Да. Тариф Про можно протестировать 14 дней с полным доступом к фокусу и аналитике."
   }
 ];
 
@@ -23,9 +23,9 @@ export default function PricingPage() {
   return (
     <>
       <PageHero
-        badge="Pricing"
-        title="Choose the system that matches your ambition."
-        description="Transparent pricing for individuals and teams who want clarity, consistency, and measurable progress."
+        badge="Тарифы"
+        title="Выберите систему, соответствующую вашим амбициям."
+        description="Прозрачные тарифы для людей и команд, которым нужны ясность, стабильность и измеримый прогресс."
       />
       <PricingSection />
       <section className="section-space pt-6">

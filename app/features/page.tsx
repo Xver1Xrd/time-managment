@@ -8,9 +8,9 @@ export default function FeaturesPage() {
   return (
     <>
       <PageHero
-        badge="Features"
-        title="A complete focus and planning architecture."
-        description="From priority mapping to deep work protection, Momentum gives you a high-clarity operating system for daily execution."
+        badge="Возможности"
+        title="Полная архитектура фокуса и планирования."
+        description="От карты приоритетов до защиты deep work — Momentum дает вам операционную систему дня с максимальной ясностью."
       />
       <FeaturesSection />
       <AdvantagesSection />
