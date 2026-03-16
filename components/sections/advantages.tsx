@@ -1,0 +1,156 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { Container } from "@/components/ui/container";
+import { Reveal } from "@/components/ui/reveal";
+
+const advantages = [
+  {
+    title: "Intelligent Planning",
+    description:
+      "Daily blueprints adapt automatically to your available capacity."
+  },
+  {
+    title: "Priority Mapping",
+    description:
+      "Impact-aware ranking keeps strategic work visible and protected."
+  },
+  {
+    title: "Deep Work Sessions",
+    description:
+      "Session boundaries and visual timers reduce attention fragmentation."
+  },
+  {
+    title: "Energy-Based Scheduling",
+    description:
+      "High-cognitive work is placed where your energy curve is strongest."
+  },
+  {
+    title: "Progress Visibility",
+    description:
+      "Real-time dashboards show completion quality, not just activity volume."
+  },
+  {
+    title: "Weekly Reset System",
+    description:
+      "Close each week with review rituals and a clean next-week launch."
+  }
+];
+
+export function AdvantagesSection() {
+  return (
+    <section className="section-space" id="system">
+      <Container>
+        <Reveal className="mb-10">
+          <Badge>Why It Works</Badge>
+          <h2 className="mt-5 max-w-3xl font-heading text-3xl tracking-tight text-white sm:text-5xl">
+            Premium planning architecture designed for consistent control.
+          </h2>
+        </Reveal>
+
+        <div className="grid gap-4 lg:grid-cols-12 lg:grid-rows-3">
+          <motion.div
+            className="lg:col-span-6 lg:row-span-2"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Card className="group relative h-full min-h-[280px] overflow-hidden border-white/15 bg-gradient-to-br from-[#1a1e2a] via-[#121722] to-[#0d1219] p-6">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(209,134,71,0.35),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(85,120,183,0.28),transparent_40%)]" />
+              <div className="absolute inset-0 bg-grid-fade bg-[length:34px_34px] opacity-20" />
+              <div className="relative">
+                <p className="text-xs uppercase tracking-[0.18em] text-white/58">
+                  Command Dashboard
+                </p>
+                <h3 className="mt-3 font-heading text-3xl text-white">
+                  One Screen. Full Situational Awareness.
+                </h3>
+                <p className="mt-4 max-w-md text-sm leading-relaxed text-white/68">
+                  See priorities, session rhythm, and outcome signals in one calm
+                  command view.
+                </p>
+              </div>
+            </Card>
+          </motion.div>
+
+          {advantages.slice(0, 3).map((item, index) => (
+            <motion.div
+              key={item.title}
+              className="lg:col-span-6"
+              initial={{ opacity: 0, x: 24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.52, delay: 0.07 * index }}
+            >
+              <Card className="premium-card flex h-full items-center justify-between gap-4 border-white/12 bg-[#0f141d]/80 p-5">
+                <div>
+                  <h3 className="font-heading text-xl text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm text-white/63">{item.description}</p>
+                </div>
+                <button
+                  type="button"
+                  className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] text-white/75 transition hover:bg-white/[0.08] hover:text-white"
+                >
+                  <ArrowUpRight className="h-4 w-4" />
+                </button>
+              </Card>
+            </motion.div>
+          ))}
+
+          {advantages.slice(3, 5).map((item, index) => (
+            <motion.div
+              key={item.title}
+              className="lg:col-span-4"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.06 * index }}
+            >
+              <Card className="premium-card flex h-full flex-col justify-between border-white/12 bg-[#101521]/85 p-5">
+                <div>
+                  <h3 className="font-heading text-xl text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm text-white/63">{item.description}</p>
+                </div>
+                <span className="mt-6 text-xs uppercase tracking-[0.18em] text-white/46">
+                  Explore
+                </span>
+              </Card>
+            </motion.div>
+          ))}
+
+          <motion.div
+            className="lg:col-span-4"
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+          >
+            <Card className="relative h-full min-h-[210px] overflow-hidden border-white/15 bg-gradient-to-br from-[#171319] via-[#11141c] to-[#0b1118] p-5">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(210,138,88,0.36),transparent_36%)]" />
+              <div className="relative">
+                <h3 className="font-heading text-2xl text-white">{advantages[5].title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/66">
+                  {advantages[5].description}
+                </p>
+                <div className="mt-6 flex gap-2">
+                  {["Audit", "Reset", "Rebuild"].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/70"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        </div>
+      </Container>
+    </section>
+  );
+}
