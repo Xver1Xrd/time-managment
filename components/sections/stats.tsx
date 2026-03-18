@@ -10,7 +10,7 @@ export function StatsSection() {
   return (
     <section className="section-space pt-4 sm:pt-6">
       <Container>
-        <Card className="relative overflow-hidden rounded-[26px] border-white/15 bg-[#0c1118]/82">
+        <Card className="relative overflow-hidden rounded-[26px] border-white/15 bg-[#151018]/82">
           <Image
             src="/images/stats-bg.jpg"
             alt="Фоновое фото для блока метрик"
@@ -29,7 +29,7 @@ export function StatsSection() {
                 transition={{ duration: 0.45, delay: 0.05 * index }}
               >
                 <p className="font-heading text-3xl tracking-tight text-white">{item.value}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/58">
+                <p className="mt-2 text-[0.72rem] tracking-[0.12em] text-white/58">
                   {item.label}
                 </p>
               </motion.div>

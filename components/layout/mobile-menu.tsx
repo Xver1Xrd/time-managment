@@ -26,7 +26,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
             onClick={onClose}
           />
           <motion.div
-            className="fixed inset-x-3 top-3 z-50 rounded-2xl border border-white/15 bg-[#0d1015]/96 p-5 shadow-2xl"
+            className="fixed inset-x-3 top-3 z-50 rounded-2xl border border-white/15 bg-[#171219]/96 p-5 shadow-2xl"
             initial={{ opacity: 0, y: -24, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.98 }}
@@ -65,7 +65,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
             </nav>
             <div className="mt-7">
               <Button href="/pricing" fullWidth size="lg" onClick={onClose}>
-                Собрать Свой День
+                Попробовать бесплатно
               </Button>
             </div>
           </motion.div>

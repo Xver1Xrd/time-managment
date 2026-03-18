@@ -10,34 +10,34 @@ import { Reveal } from "@/components/ui/reveal";
 
 const advantages = [
   {
-    title: "Интеллектуальное Планирование",
+    title: "Умное планирование",
     description:
-      "Дневной план автоматически адаптируется под вашу реальную емкость."
+      "План не перегружает день и подстраивается под реальную загрузку."
   },
   {
-    title: "Карта Приоритетов",
+    title: "Карта приоритетов",
     description:
-      "Ранжирование по влиянию держит стратегические задачи в фокусе."
+      "Главные задачи всегда на поверхности, даже когда день идет не по плану."
   },
   {
-    title: "Deep Work Сессии",
+    title: "Сессии глубокой работы",
     description:
-      "Границы сессий и визуальные таймеры снижают фрагментацию внимания."
+      "Четкие интервалы помогают держать внимание и не дробить время на мелочи."
   },
   {
-    title: "Планирование По Энергии",
+    title: "Планирование по энергии",
     description:
-      "Сложная когнитивная работа ставится в пик вашей энергии."
+      "Сложная работа попадает в часы, когда у вас больше ресурса."
   },
   {
-    title: "Прозрачный Прогресс",
+    title: "Прозрачный прогресс",
     description:
-      "Панели в реальном времени показывают качество, а не только активность."
+      "Вы видите не только количество задач, но и качество выполненной работы."
   },
   {
-    title: "Система Недельного Ресета",
+    title: "Еженедельный обзор",
     description:
-      "Закрывайте неделю через ревью-ритуал и запускайте новую с чистого листа."
+      "Неделя закрывается выводами, а новая начинается без накопленного шума."
   }
 ];
 
@@ -46,9 +46,9 @@ export function AdvantagesSection() {
     <section className="section-space" id="system">
       <Container>
         <Reveal className="mb-10">
-          <Badge>Почему Это Работает</Badge>
+          <Badge>Почему это работает</Badge>
           <h2 className="mt-5 max-w-3xl font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Премиальная архитектура планирования для стабильного контроля.
+            Система, которая помогает держать день в руках без лишнего напряжения.
           </h2>
         </Reveal>
 
@@ -60,7 +60,7 @@ export function AdvantagesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="group relative h-full min-h-[280px] overflow-hidden border-white/15 bg-gradient-to-br from-[#1a1e2a] via-[#121722] to-[#0d1219] p-6">
+            <Card className="group relative h-full min-h-[280px] overflow-hidden border-white/15 bg-gradient-to-br from-[#231821] via-[#18121a] to-[#120e14] p-6">
               <Image
                 src="/images/adv-planning.jpg"
                 alt="Карта планирования и сессия тайм-блокинга"
@@ -71,14 +71,14 @@ export function AdvantagesSection() {
               <div className="absolute inset-0 bg-grid-fade bg-[length:34px_34px] opacity-18" />
               <div className="relative">
                 <p className="text-xs uppercase tracking-[0.18em] text-white/58">
-                  Командный Дашборд
+                  Единый обзор
                 </p>
                 <h3 className="mt-3 font-heading text-3xl text-white">
-                  Один Экран. Полная Оперативная Ясность.
+                  Один экран, на котором видно весь день.
                 </h3>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-white/68">
-                  Видьте приоритеты, ритм сессий и сигналы результата в одном
-                  спокойном экране управления.
+                  Приоритеты, фокус-сессии и итоги собраны в одном спокойном
+                  интерфейсе без визуального шума.
                 </p>
               </div>
             </Card>
@@ -93,7 +93,7 @@ export function AdvantagesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.52, delay: 0.07 * index }}
             >
-              <Card className="premium-card flex h-full items-center justify-between gap-4 border-white/12 bg-[#0f141d]/80 p-5">
+              <Card className="premium-card flex h-full items-center justify-between gap-4 border-white/12 bg-[#17121b]/80 p-5">
                 <div>
                   <h3 className="font-heading text-xl text-white">{item.title}</h3>
                   <p className="mt-2 text-sm text-white/63">{item.description}</p>
@@ -117,13 +117,13 @@ export function AdvantagesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.06 * index }}
             >
-              <Card className="premium-card flex h-full flex-col justify-between border-white/12 bg-[#101521]/85 p-5">
+              <Card className="premium-card flex h-full flex-col justify-between border-white/12 bg-[#1b1420]/85 p-5">
                 <div>
                   <h3 className="font-heading text-xl text-white">{item.title}</h3>
                   <p className="mt-2 text-sm text-white/63">{item.description}</p>
                 </div>
                 <span className="mt-6 text-xs uppercase tracking-[0.18em] text-white/46">
-                  Изучить
+                  Подробнее
                 </span>
               </Card>
             </motion.div>
@@ -136,14 +136,14 @@ export function AdvantagesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
-            <Card className="relative h-full min-h-[210px] overflow-hidden border-white/15 bg-gradient-to-br from-[#171319] via-[#11141c] to-[#0b1118] p-5">
+            <Card className="relative h-full min-h-[210px] overflow-hidden border-white/15 bg-gradient-to-br from-[#1e151b] via-[#17121a] to-[#120f16] p-5">
               <Image
                 src="/images/adv-workspace.jpg"
-                alt="Премиальное рабочее пространство для недельного ресета"
+                alt="Рабочее пространство для еженедельного обзора"
                 fill
                 className="object-cover opacity-34"
               />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(210,138,88,0.34),transparent_36%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(169,123,136,0.28),transparent_36%)]" />
               <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/58 to-black/72" />
               <div className="relative">
                 <h3 className="font-heading text-2xl text-white">{advantages[5].title}</h3>
@@ -151,7 +151,7 @@ export function AdvantagesSection() {
                   {advantages[5].description}
                 </p>
                 <div className="mt-6 flex gap-2">
-                  {["Аудит", "Ресет", "Пересборка"].map((tag) => (
+                  {["Обзор", "Перезапуск", "Фокус"].map((tag) => (
                     <span
                       key={tag}
                       className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/70"

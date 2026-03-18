@@ -23,9 +23,9 @@ export function FeaturesSection() {
     <section id="features" className="section-space">
       <Container>
         <Reveal className="mb-10 max-w-2xl">
-          <Badge>Ядро Системы</Badge>
+          <Badge>Основа системы</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Замените разрозненные усилия структурным исполнением.
+            Все ключевые инструменты для спокойного и собранного дня.
           </h2>
         </Reveal>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -40,7 +40,7 @@ export function FeaturesSection() {
                 transition={{ duration: 0.58, delay: index * 0.06 }}
                 className="h-full"
               >
-                <Card className="premium-card hover-glow group relative flex h-full flex-col justify-between overflow-hidden border-white/12 bg-[#0f141c]/82 p-5">
+                <Card className="premium-card hover-glow group relative flex h-full flex-col justify-between overflow-hidden border-white/12 bg-[#17121a]/82 p-5">
                   <Image
                     src={cardBackgrounds[index] ?? "/images/feature-clarity.jpg"}
                     alt={`Фоновое фото для карточки ${card.title}`}
@@ -63,7 +63,7 @@ export function FeaturesSection() {
                     href="/features"
                     className="relative mt-7 inline-flex items-center text-sm text-white/78 transition hover:text-white"
                   >
-                    Изучить <ArrowUpRight className="ml-1 h-4 w-4" />
+                    Подробнее <ArrowUpRight className="ml-1 h-4 w-4" />
                   </Link>
                 </Card>
               </motion.div>

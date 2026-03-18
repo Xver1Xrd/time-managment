@@ -24,13 +24,13 @@ npm -v
 
 ## Быстрый запуск (локально, dev)
 
-### 1. Установка зависимостей
+### 1. Установить зависимости
 
 ```bash
 npm install
 ```
 
-### 2. Запуск dev-сервера
+### 2. Запустить dev-сервер
 
 ```bash
 npm run dev
@@ -40,6 +40,26 @@ npm run dev
 
 ```text
 http://localhost:3000
+```
+
+## Важно про стабильность dev
+
+`npm run dev` запускается через скрипт `scripts/dev.mjs`, который:
+
+1. очищает `.next` перед запуском
+2. очищает `node_modules/.cache/webpack`
+3. запускает Next.js с `NEXT_DISABLE_WEBPACK_CACHE=1`
+
+Это защищает от типичных ошибок:
+
+- `Cannot find module './xxx.js'`
+- `/_next/static/... 404`
+- `Failed to read source code ... (os error 2)`
+
+Если нужно обычное поведение Next без защитного wrapper:
+
+```bash
+npm run dev:raw
 ```
 
 ## Production запуск
@@ -59,11 +79,14 @@ npm run start
 ## Полезные команды
 
 ```bash
-# Проверка линтером
+# Линтер
 npm run lint
 
-# Dev режим
+# Стабильный dev (рекомендуется)
 npm run dev
+
+# Raw dev (без авто-очистки)
+npm run dev:raw
 
 # Production build
 npm run build
@@ -72,22 +95,9 @@ npm run build
 npm run start
 ```
 
-## Что делать, если сайт "ломается" в dev
+## Если порт 3000 занят
 
-Иногда Next.js кеширует старые чанки (`404` на `/_next/static/...` или ошибка `Cannot find module './xxx.js'`).
-
-### Windows (PowerShell / CMD)
-
-1. Останови сервер (`Ctrl + C`)
-2. Удали кеш `.next`
-3. Запусти снова
-
-```powershell
-cmd /c rmdir /s /q .next
-npm run dev
-```
-
-Если занят порт `3000`:
+### Windows
 
 ```powershell
 netstat -ano | findstr :3000
@@ -97,18 +107,11 @@ taskkill /PID <PID> /F
 ### macOS / Linux
 
 ```bash
-rm -rf .next
-npm run dev
-```
-
-Если занят порт `3000`:
-
-```bash
 lsof -i :3000
 kill -9 <PID>
 ```
 
-## Переустановка зависимостей (если совсем нестабильно)
+## Полная переустановка зависимостей (если нужно)
 
 ### Windows
 

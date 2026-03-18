@@ -17,7 +17,7 @@ interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent text-black shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_12px_28px_rgba(209,134,71,0.28)] hover:bg-[#f0b985] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.18),0_18px_32px_rgba(209,134,71,0.32)]",
+    "bg-accent text-black shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_12px_28px_rgba(161,112,126,0.24)] hover:bg-[#d8c1c7] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.18),0_18px_32px_rgba(161,112,126,0.3)]",
   secondary:
     "border border-border bg-white/[0.03] text-foreground hover:bg-white/[0.08] hover:border-white/25",
   ghost:

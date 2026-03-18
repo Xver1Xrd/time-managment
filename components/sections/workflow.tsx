@@ -13,7 +13,7 @@ export function WorkflowSection() {
         <Reveal className="mb-10 max-w-2xl">
           <Badge>Процесс</Badge>
           <h2 className="mt-5 font-heading text-3xl tracking-tight text-white sm:text-5xl">
-            Фокус строится через повторяемую последовательность.
+            Хороший день складывается из пяти понятных шагов.
           </h2>
         </Reveal>
 
@@ -22,7 +22,7 @@ export function WorkflowSection() {
           {workflowSteps.map((step, index) => (
             <motion.article
               key={step.title}
-              className="premium-card relative rounded-2xl border border-white/12 bg-[#0f141d]/82 p-5"
+              className="premium-card relative rounded-2xl border border-white/12 bg-[#17131b]/82 p-5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

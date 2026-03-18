@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: 220 19% 5%;
+  --background: 336 16% 8%;
   --foreground: 210 20% 95%;
-  --surface: 220 14% 10%;
-  --border: 220 12% 21%;
-  --accent: 29 78% 64%;
-  --accent-soft: 25 33% 30%;
+  --surface: 334 14% 12%;
+  --border: 336 10% 24%;
+  --accent: 347 24% 72%;
+  --accent-soft: 342 18% 33%;
 }
 
 * {
@@ -28,9 +28,10 @@ body {
 body {
   font-family: var(--font-manrope), sans-serif;
   background-image:
-    radial-gradient(circle at 10% -10%, rgba(195, 130, 80, 0.18), transparent 40%),
-    radial-gradient(circle at 90% 0%, rgba(92, 109, 150, 0.18), transparent 38%),
-    linear-gradient(180deg, #090a0d 0%, #090a0d 100%);
+    radial-gradient(circle at 16% -8%, rgba(201, 128, 92, 0.32), transparent 42%),
+    radial-gradient(circle at 84% 6%, rgba(149, 78, 95, 0.24), transparent 40%),
+    radial-gradient(circle at 52% 112%, rgba(190, 136, 106, 0.24), transparent 46%),
+    linear-gradient(180deg, #1b1419 0%, #251921 48%, #362530 100%);
 }
 
 a {
@@ -39,7 +40,7 @@ a {
 }
 
 ::selection {
-  background: rgba(220, 145, 81, 0.34);
+  background: rgba(204, 170, 178, 0.34);
   color: #ffffff;
 }
 
@@ -48,12 +49,12 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #090a0d;
+  background: #0f0c11;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  border: 2px solid #090a0d;
+  border: 2px solid #0f0c11;
   background: rgba(255, 255, 255, 0.17);
 }
 
@@ -62,7 +63,7 @@ a {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.14;
+  opacity: 0.1;
   background-image:
     radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05), transparent 30%),
     radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.04), transparent 30%);

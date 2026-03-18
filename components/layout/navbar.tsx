@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { motion } from "framer-motion";
 import { navLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui/container";
@@ -31,23 +30,17 @@ export function Navbar() {
 
   return (
     <>
-      <motion.header
-        className="sticky top-0 z-40 px-3 pt-3"
-        animate={{
-          y: isScrolled ? 2 : 0
-        }}
-        transition={{ duration: 0.25, ease: "easeOut" }}
-      >
+      <header className="sticky top-0 z-40 px-3 pt-3">
         <Container
           className={cn(
             "flex items-center justify-between rounded-2xl border border-white/10 px-4 py-3 transition-all duration-300 sm:px-6",
             isScrolled
-              ? "bg-[#0a0d12]/90 shadow-[0_10px_40px_rgba(0,0,0,0.34)] backdrop-blur-xl"
-              : "bg-[#0b0d11]/60 backdrop-blur-md"
+              ? "bg-[#161118]/90 shadow-[0_10px_40px_rgba(0,0,0,0.34)] backdrop-blur-xl"
+              : "bg-[#1a1218]/60 backdrop-blur-md"
           )}
         >
           <Link href="/" className="group inline-flex items-center gap-3">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-accent/80 to-[#6d86b6]/80 font-heading text-xs font-semibold text-black">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-accent/85 to-[#84505e]/80 font-heading text-xs font-semibold text-black">
               M
             </span>
             <span className="font-heading text-base tracking-[0.16em] text-white/90 transition group-hover:text-white">
@@ -69,7 +62,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <Button href="/pricing" size="sm">
-              Начать Фокус
+              Попробовать бесплатно
             </Button>
           </div>
 
@@ -82,7 +75,7 @@ export function Navbar() {
             <Menu size={18} />
           </button>
         </Container>
-      </motion.header>
+      </header>
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} links={navLinks} />
     </>
   );

@@ -6,18 +6,18 @@ const socialItems = ["X", "Dribbble", "LinkedIn", "GitHub"];
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-[#08090c] py-14">
+    <footer className="relative border-t border-white/10 bg-gradient-to-b from-[#20161d] to-[#32222d] py-14">
       <Container className="grid gap-12 lg:grid-cols-[1.35fr_1fr_1fr_1fr]">
         <div className="max-w-sm">
           <p className="font-heading text-sm uppercase tracking-[0.22em] text-white/62">
             Momentum
           </p>
           <h3 className="mt-4 font-heading text-2xl tracking-tight text-white">
-            Проектируйте время осознанно.
+            Спокойный ритм начинается с понятной системы.
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-white/64">
-            Премиальная инфраструктура продуктивности для тех, кто выбирает
-            спокойствие, структуру и результат.
+            Momentum помогает планировать без перегруза, сохранять фокус и
+            видеть реальную картину недели.
           </p>
           <p className="mt-6 text-sm text-white/60">hello@momentum.system</p>
         </div>
