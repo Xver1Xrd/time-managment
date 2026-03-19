@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
@@ -63,7 +63,7 @@ export function MobileMenu({ open, onClose, links }: MobileMenuProps) {
                     Откройте нужный раздел без лишнего поиска.
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-white/64">
-                    Сначала демо и система, затем тарифы и форма связи. Все важное в двух касаниях.
+                    О сервисе, демо, тарифы и контакты собраны в одном месте. Все важное открывается за пару касаний.
                   </p>
                 </div>
 

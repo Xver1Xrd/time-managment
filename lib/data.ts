@@ -1,7 +1,6 @@
 export const navLinks = [
-  { label: "Возможности", href: "/features" },
-  { label: "Система", href: "/#showcase" },
-  { label: "Процесс", href: "/#workflow" },
+  { label: "О сервисе", href: "/about" },
+  { label: "Демо", href: "/features" },
   { label: "Тарифы", href: "/pricing" },
   { label: "Контакты", href: "/contact" }
 ];
