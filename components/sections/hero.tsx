@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useState, type ComponentType, type SVGProps } from "react";
+import { useEffect, useRef, useState, type ComponentType, type SVGProps } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, BarChart3, Check, Clock3, ListTodo } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -46,6 +46,8 @@ const trustItems = [
 ];
 
 const chartLabels = ["08", "10", "12", "14", "16", "18"];
+const HERO_ROTATION_DELAY_MS = 11000;
+const HERO_ROTATION_PAUSE_AFTER_INTERACTION_MS = 20000;
 
 const heroModes: HeroMode[] = [
   {
@@ -549,15 +551,25 @@ function DesktopHeroPreview({ activeMode, activeModeKey, setActiveModeKey }: Her
 
 export function HeroSection() {
   const [activeModeKey, setActiveModeKey] = useState<HeroModeKey>(heroModes[0].key);
+  const autoRotatePauseUntilRef = useRef(0);
+
+  const handleModeChange = (key: HeroModeKey) => {
+    autoRotatePauseUntilRef.current = Date.now() + HERO_ROTATION_PAUSE_AFTER_INTERACTION_MS;
+    setActiveModeKey(key);
+  };
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
+      if (Date.now() < autoRotatePauseUntilRef.current) {
+        return;
+      }
+
       setActiveModeKey((currentKey) => {
         const currentIndex = heroModes.findIndex((mode) => mode.key === currentKey);
         const nextIndex = (currentIndex + 1) % heroModes.length;
         return heroModes[nextIndex]?.key ?? heroModes[0].key;
       });
-    }, 4200);
+    }, HERO_ROTATION_DELAY_MS);
 
     return () => window.clearInterval(intervalId);
   }, []);
@@ -611,7 +623,7 @@ export function HeroSection() {
             <MobileHeroPreview
               activeMode={activeMode}
               activeModeKey={activeModeKey}
-              setActiveModeKey={setActiveModeKey}
+              setActiveModeKey={handleModeChange}
             />
           </div>
 
@@ -624,7 +636,7 @@ export function HeroSection() {
             <DesktopHeroPreview
               activeMode={activeMode}
               activeModeKey={activeModeKey}
-              setActiveModeKey={setActiveModeKey}
+              setActiveModeKey={handleModeChange}
             />
           </div>
         </Reveal>

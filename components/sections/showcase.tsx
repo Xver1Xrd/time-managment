@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { BarChart3, Clock3, Layers, Sparkles } from "lucide-react";
 import { showcaseTabs } from "@/lib/data";
@@ -77,18 +77,30 @@ const showcaseDetails = {
 } as const;
 
 const chartLabels = ["08", "10", "12", "14", "16", "18"];
+const SHOWCASE_ROTATION_DELAY_MS = 12000;
+const SHOWCASE_ROTATION_PAUSE_AFTER_INTERACTION_MS = 20000;
 
 export function ShowcaseSection() {
   const [activeKey, setActiveKey] = useState(showcaseTabs[0]?.key ?? "plan");
+  const autoRotatePauseUntilRef = useRef(0);
+
+  const handleTabChange = (key: string) => {
+    autoRotatePauseUntilRef.current = Date.now() + SHOWCASE_ROTATION_PAUSE_AFTER_INTERACTION_MS;
+    setActiveKey(key);
+  };
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
+      if (Date.now() < autoRotatePauseUntilRef.current) {
+        return;
+      }
+
       setActiveKey((currentKey) => {
         const currentIndex = showcaseTabs.findIndex((tab) => tab.key === currentKey);
         const nextIndex = (currentIndex + 1) % showcaseTabs.length;
         return showcaseTabs[nextIndex]?.key ?? showcaseTabs[0]?.key ?? "plan";
       });
-    }, 4800);
+    }, SHOWCASE_ROTATION_DELAY_MS);
 
     return () => window.clearInterval(intervalId);
   }, []);
@@ -128,7 +140,7 @@ export function ShowcaseSection() {
                 <button
                   key={tab.key}
                   type="button"
-                  onClick={() => setActiveKey(tab.key)}
+                  onClick={() => handleTabChange(tab.key)}
                   className={cn(
                     "shrink-0 rounded-full border px-4 py-2 text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                     activeKey === tab.key
@@ -279,7 +291,7 @@ export function ShowcaseSection() {
                 <button
                   key={tab.key}
                   type="button"
-                  onClick={() => setActiveKey(tab.key)}
+                  onClick={() => handleTabChange(tab.key)}
                   className={cn(
                     "rounded-full border px-4 py-2 text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
                     activeKey === tab.key
