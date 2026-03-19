@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -48,7 +48,10 @@ export function SectionProgress() {
     );
 
     elements.forEach((element) => observer.observe(element as Element));
-    return () => observer.disconnect();
+
+    return () => {
+      observer.disconnect();
+    };
   }, [pathname]);
 
   function scrollToSection(sectionId: string) {
@@ -81,9 +84,7 @@ export function SectionProgress() {
               >
                 <span
                   className={`text-xs transition ${
-                    isActive
-                      ? "text-white/82"
-                      : "text-white/0 group-hover:text-white/58"
+                    isActive ? "text-white/82" : "text-white/0 group-hover:text-white/58"
                   }`}
                 >
                   {section.label}

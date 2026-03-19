@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { caseStudies, trustLogos } from "@/lib/data";
@@ -6,6 +6,30 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
+
+function CaseStudyCard({ item }: { item: (typeof caseStudies)[number] }) {
+  return (
+    <Card className="premium-card h-full overflow-hidden rounded-[28px] border-white/12 bg-[#18131d]/88 p-6">
+      <p className="text-xs uppercase tracking-[0.16em] text-accent">{item.label}</p>
+      <div className="mt-3 flex items-start justify-between gap-4">
+        <div>
+          <p className="text-sm text-white/52">{item.company}</p>
+          <h3 className="mt-2 font-heading text-2xl leading-tight text-white">{item.title}</h3>
+        </div>
+      </div>
+      <p className="mt-4 text-sm leading-relaxed text-white/68">{item.description}</p>
+
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        {item.metrics.map((metric) => (
+          <div key={metric.label} className="rounded-2xl border border-white/10 bg-black/18 p-4">
+            <p className="text-xs uppercase tracking-[0.14em] text-white/42">{metric.label}</p>
+            <p className="mt-2 font-heading text-3xl text-white">{metric.value}</p>
+          </div>
+        ))}
+      </div>
+    </Card>
+  );
+}
 
 export function TrustSection() {
   return (
@@ -19,7 +43,7 @@ export function TrustSection() {
         </Reveal>
 
         <Card className="mb-4 overflow-hidden rounded-[28px] border-white/12 bg-[#17121b]/88 p-5 sm:p-6">
-          <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {trustLogos.map((logo, index) => (
               <motion.div
                 key={logo}
@@ -27,7 +51,7 @@ export function TrustSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.04 }}
-                className="flex h-16 items-center justify-center rounded-2xl border border-white/10 bg-black/18 font-heading text-lg tracking-[0.18em] text-white/64"
+                className="flex h-16 items-center justify-center rounded-2xl border border-white/10 bg-black/18 font-heading text-base tracking-[0.16em] text-white/64 sm:text-lg sm:tracking-[0.18em]"
               >
                 {logo}
               </motion.div>
@@ -35,7 +59,28 @@ export function TrustSection() {
           </div>
         </Card>
 
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="lg:hidden">
+          <div className="mb-4 flex items-center justify-between gap-3 px-1">
+            <p className="text-sm text-white/58">Кейсы, в которых система уже дала результат.</p>
+            <span className="text-[0.68rem] uppercase tracking-[0.18em] text-white/34">листайте</span>
+          </div>
+          <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 no-scrollbar">
+            {caseStudies.map((item, index) => (
+              <motion.div
+                key={item.company}
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
+                className="min-w-[88%] snap-center"
+              >
+                <CaseStudyCard item={item} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden gap-4 lg:grid lg:grid-cols-2">
           {caseStudies.map((item, index) => (
             <motion.div
               key={item.company}
@@ -44,36 +89,7 @@ export function TrustSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <Card className="premium-card h-full overflow-hidden rounded-[28px] border-white/12 bg-[#18131d]/88 p-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-accent">
-                  {item.label}
-                </p>
-                <div className="mt-3 flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-sm text-white/52">{item.company}</p>
-                    <h3 className="mt-2 font-heading text-2xl leading-tight text-white">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="mt-4 text-sm leading-relaxed text-white/68">
-                  {item.description}
-                </p>
-
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {item.metrics.map((metric) => (
-                    <div
-                      key={metric.label}
-                      className="rounded-2xl border border-white/10 bg-black/18 p-4"
-                    >
-                      <p className="text-xs uppercase tracking-[0.14em] text-white/42">
-                        {metric.label}
-                      </p>
-                      <p className="mt-2 font-heading text-3xl text-white">{metric.value}</p>
-                    </div>
-                  ))}
-                </div>
-              </Card>
+              <CaseStudyCard item={item} />
             </motion.div>
           ))}
         </div>

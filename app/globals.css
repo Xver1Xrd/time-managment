@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -20,12 +20,15 @@ body {
   margin: 0;
   width: 100%;
   min-height: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.75rem;
   background: hsl(var(--background));
   color: hsl(var(--foreground));
 }
 
 body {
+  position: relative;
   font-family: var(--font-manrope), sans-serif;
   background-image:
     radial-gradient(circle at 16% -8%, rgba(201, 128, 92, 0.32), transparent 42%),
@@ -69,9 +72,25 @@ a {
     radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.04), transparent 30%);
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .section-space {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
+@media (min-width: 640px) {
+  .section-space {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
