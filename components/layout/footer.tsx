@@ -2,7 +2,11 @@ import Link from "next/link";
 import { footerLinks } from "@/lib/data";
 import { Container } from "@/components/ui/container";
 
-const socialItems = ["X", "Dribbble", "LinkedIn", "GitHub"];
+const socialItems = [
+  { label: "GitHub", href: "https://github.com/Xver1Xrd/time-managment" }
+];
+
+const projectGithubUrl = "https://github.com/Xver1Xrd/time-managment";
 
 export function Footer() {
   return (
@@ -16,8 +20,8 @@ export function Footer() {
             Спокойный ритм начинается с понятной системы.
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-white/64">
-            Momentum помогает планировать без перегруза, сохранять фокус и
-            видеть реальную картину недели.
+            Momentum помогает планировать без перегруза, сохранять фокус и видеть
+            реальную картину недели.
           </p>
           <p className="mt-6 text-sm text-white/60">hello@momentum.system</p>
         </div>
@@ -56,19 +60,30 @@ export function Footer() {
           <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/54">Соцсети</p>
           <div className="space-y-3">
             {socialItems.map((social) => (
-              <Link
-                key={social}
-                href="#"
+              <a
+                key={social.label}
+                href={social.href}
+                target={social.href.startsWith("http") ? "_blank" : undefined}
+                rel={social.href.startsWith("http") ? "noreferrer" : undefined}
                 className="block text-sm text-white/75 transition hover:text-white"
               >
-                {social}
-              </Link>
+                {social.label}
+              </a>
             ))}
           </div>
         </div>
       </Container>
-      <Container className="mt-12 border-t border-white/10 pt-6 text-xs text-white/45">
-        Copyright (c) {new Date().getFullYear()} Momentum Systems. Все права защищены.
+
+      <Container className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        <p>made by xverlxrd</p>
+        <a
+          href={projectGithubUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="text-white/60 transition hover:text-white"
+        >
+          github.com/Xver1Xrd/time-managment
+        </a>
       </Container>
     </footer>
   );
